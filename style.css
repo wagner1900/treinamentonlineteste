@@ -199,3 +199,18 @@ header nav a.login-btn:hover {
   width: 100%;
   margin-top: 10px;
 }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 8px;
+  border: 2px solid #ffc107;
+}
