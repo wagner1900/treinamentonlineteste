@@ -13,7 +13,7 @@ export function Navbar() {
   return (
     <nav className="flex items-center justify-between py-4">
       <Link href="/" className="text-3xl font-extrabold tracking-widest text-yellow-400">
-        🥋 Treinamento<span className="text-red-500">Online</span>
+        Treinamento<span className="text-red-500">Online</span>
       </Link>
       <div className="flex gap-4 items-center">
         {pathname !== "/(auth)/login" && (
