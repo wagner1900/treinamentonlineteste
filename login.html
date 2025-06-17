@@ -3,34 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Treinamento de Artes Marciais</title>
+  <title>Login - Treinamento de Artes Marciais</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="login-page">
   <header>
     <h1>Treinamento de Artes Marciais</h1>
     <nav>
       <a href="index.html">Início</a>
-      <a href="login.html" class="login-btn">Entrar</a>
     </nav>
   </header>
-  <section class="hero">
-    <img src="images/dragon.svg" alt="Dragão oriental" class="dragon" />
-    <h2>Desenvolva suas habilidades e aumente seus conhecimentos</h2>
-  </section>
-  <section class="videos">
-    <h2>Jeet Kune Do</h2>
-    <div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/dummy1" title="Jeet Kune Do" allowfullscreen></iframe>
-    </div>
-    <h2>Luta Livre</h2>
-    <div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/dummy2" title="Luta Livre" allowfullscreen></iframe>
-    </div>
-  </section>
+  <main class="login-container">
+    <form class="login-form">
+      <h2>Área do Aluno</h2>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+      <label for="password">Senha</label>
+      <input type="password" id="password" name="password" required />
+      <button type="submit">Entrar</button>
+    </form>
+  </main>
   <footer>
     <p>&copy; 2024 Artes Marciais Online</p>
   </footer>
