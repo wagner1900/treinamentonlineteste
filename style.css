@@ -188,7 +188,8 @@ header nav a.login-btn:hover {
 
 .jetkune-img {
   height: 100px;
-  object-position: top;
+  object-fit: contain;
+  object-position: center;
 }
 
 .produto a.btn {
