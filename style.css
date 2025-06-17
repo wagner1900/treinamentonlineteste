@@ -24,13 +24,13 @@ header {
   background-color: #ffffff;
   padding: 20px;
   text-align: center;
-  border-bottom: 4px solid #d4af37;
+  border-bottom: 4px solid #ffc107;
 }
 
 header h1 {
   margin: 0;
   font-size: 2rem;
-  color: #d4af37;
+  color: #ffc107;
 }
 
 .hero {
@@ -41,6 +41,14 @@ header h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.hero-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #ffc107;
+  border-radius: 8px;
+  padding: 20px;
+  display: inline-block;
 }
 
 .hero h2 {
@@ -62,7 +70,7 @@ footer {
   text-align: center;
   padding: 10px;
   background-color: #ffffff;
-  border-top: 4px solid #d4af37;
+  border-top: 4px solid #ffc107;
   color: #333;
   font-size: 0.9rem;
 }
@@ -78,14 +86,14 @@ header nav a {
 }
 
 header nav a.login-btn {
-  background-color: #d4af37;
+  background-color: #ffc107;
   color: #1a1a1a;
   padding: 6px 12px;
   border-radius: 4px;
 }
 
 header nav a.login-btn:hover {
-  background-color: #b8860b;
+  background-color: #d39e00;
 }
 
 .videos {
@@ -140,7 +148,7 @@ header nav a.login-btn:hover {
 }
 
 .login-form button {
-  background-color: #d4af37;
+  background-color: #ffc107;
   border: none;
   color: #1a1a1a;
   padding: 10px;
@@ -149,5 +157,5 @@ header nav a.login-btn:hover {
 }
 
 .login-form button:hover {
-  background-color: #b8860b;
+  background-color: #d39e00;
 }
