@@ -28,15 +28,22 @@
       <label for="email" class="form-label">Email</label>
       <input type="email" id="email" name="email" class="form-control mb-2" required />
 
-      <label for="arte" class="form-label">Arte Marcial</label>
-      <select id="arte" name="arte" class="form-select mb-2" onchange="updatePrice()">
-        <option value="Jeet Kune Do">Jeet Kune Do</option>
-        <option value="Luta Livre">Luta Livre</option>
-        <option value="Blend Kickboxing">Blend Kickboxing</option>
+      <label for="arte" class="form-label">Produto</label>
+      <select id="arte" name="arte" class="form-select mb-2" onchange="updatePrice();updateModules();">
+        <option value="Jeet Kune Do - Básico">Jeet Kune Do - Básico</option>
+        <option value="Jeet Kune Do - Intermediário">Jeet Kune Do - Intermediário</option>
+        <option value="Jeet Kune Do - Avançado">Jeet Kune Do - Avançado</option>
+        <option value="Blend Kickboxing - Básico">Blend Kickboxing - Básico</option>
+        <option value="Blend Kickboxing - Intermediário">Blend Kickboxing - Intermediário</option>
+        <option value="Blend Kickboxing - Avançado">Blend Kickboxing - Avançado</option>
+        <option value="Luta Livre - Básico">Luta Livre - Básico</option>
+        <option value="Luta Livre - Intermediário">Luta Livre - Intermediário</option>
+        <option value="Luta Livre - Avançado">Luta Livre - Avançado</option>
       </select>
 
       <label for="valor" class="form-label">Mensalidade</label>
       <input type="text" id="valor" name="valor" class="form-control mb-3" readonly />
+      <div id="modules" class="mb-3"></div>
 
       <button type="submit" class="btn btn-warning w-100">Registrar</button>
     </form>
@@ -47,9 +54,27 @@
 
 <script>
 const prices = {
-  'Jeet Kune Do': 'R$170',
-  'Luta Livre': 'R$170',
-  'Blend Kickboxing': 'R$190'
+  'Jeet Kune Do - Básico': 'R$170',
+  'Jeet Kune Do - Intermediário': 'R$190',
+  'Jeet Kune Do - Avançado': 'R$210',
+  'Blend Kickboxing - Básico': 'R$170',
+  'Blend Kickboxing - Intermediário': 'R$190',
+  'Blend Kickboxing - Avançado': 'R$210',
+  'Luta Livre - Básico': 'R$170',
+  'Luta Livre - Intermediário': 'R$190',
+  'Luta Livre - Avançado': 'R$210'
+};
+
+const modules = {
+  'Jeet Kune Do - Básico': ['Fundamentos', 'Defesa Pessoal', 'Condicionamento'],
+  'Jeet Kune Do - Intermediário': ['Aplicações', 'Combinações', 'Estratégias'],
+  'Jeet Kune Do - Avançado': ['Sparring', 'Filosofia', 'Táticas Avançadas'],
+  'Blend Kickboxing - Básico': ['Postura', 'Golpes Básicos', 'Condicionamento'],
+  'Blend Kickboxing - Intermediário': ['Combinações', 'Defesa', 'Táticas'],
+  'Blend Kickboxing - Avançado': ['Golpes Avançados', 'Estratégia', 'Sparring'],
+  'Luta Livre - Básico': ['Quedas', 'Controle de Solo', 'Finalizações Básicas'],
+  'Luta Livre - Intermediário': ['Passagens de Guarda', 'Raspagens', 'Finalizações Intermediárias'],
+  'Luta Livre - Avançado': ['Guarda Avançada', 'Estrangulamentos', 'Competição']
 };
 
 function updatePrice() {
@@ -58,7 +83,34 @@ function updatePrice() {
   valor.value = prices[arte] || '';
 }
 
-document.addEventListener('DOMContentLoaded', updatePrice);
+function updateModules() {
+  const arte = document.getElementById('arte').value;
+  const container = document.getElementById('modules');
+  const list = modules[arte] || [];
+  container.innerHTML = '';
+  if (list.length) {
+    const h3 = document.createElement('h3');
+    h3.textContent = 'Módulos do Curso';
+    container.appendChild(h3);
+    const ul = document.createElement('ul');
+    list.forEach(m => {
+      const li = document.createElement('li');
+      li.textContent = m;
+      ul.appendChild(li);
+    });
+    container.appendChild(ul);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const params = new URLSearchParams(window.location.search);
+  const curso = params.get('curso');
+  if (curso) {
+    document.getElementById('arte').value = decodeURIComponent(curso);
+  }
+  updatePrice();
+  updateModules();
+});
 </script>
 </body>
 </html>
