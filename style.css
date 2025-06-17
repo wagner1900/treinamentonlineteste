@@ -177,3 +177,10 @@ header nav a.login-btn:hover {
   margin-top: 0;
   margin-bottom: 10px;
 }
+
+.produto img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
