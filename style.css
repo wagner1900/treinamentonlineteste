@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-family: "Noto Serif JP", "Poppins", Arial, Helvetica, sans-serif;
   background: linear-gradient(135deg, #1a1a1a, #3a0707);
   color: #eee;
   display: flex;
@@ -54,4 +54,89 @@ footer {
   border-top: 4px solid #d4af37;
   color: #ccc;
   font-size: 0.9rem;
+}
+
+header nav {
+  margin-top: 10px;
+}
+
+header nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+header nav a.login-btn {
+  background-color: #d4af37;
+  color: #1a1a1a;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+header nav a.login-btn:hover {
+  background-color: #b8860b;
+}
+
+.videos {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.video-wrapper {
+  margin: 0 auto 30px;
+  max-width: 560px;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 315px;
+  border: none;
+}
+
+.login-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.login-form {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 320px;
+}
+
+.login-form h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.login-form label {
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.login-form input {
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: none;
+}
+
+.login-form button {
+  background-color: #d4af37;
+  border: none;
+  color: #1a1a1a;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #b8860b;
 }
