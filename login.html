@@ -25,11 +25,25 @@
       <label for="password" class="form-label">Senha</label>
       <input type="password" id="password" name="password" class="form-control mb-3" required />
       <button type="submit" class="btn btn-warning w-100 mb-2">Entrar</button>
-      <a href="register.html" class="text-warning text-center d-block">Cadastre-se</a>
+      <a href="register.html" class="text-warning text-center d-block cadastro-link">Cadastre-se</a>
     </form>
   </main>
   <footer class="text-center py-3 border-top border-warning">
     <p class="mb-0">&copy; 2024 Artes Marciais Online</p>
   </footer>
+  <audio id="signup-sound" src="old-zildjian-gong-quite-natural-34294.mp3" preload="auto"></audio>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sound = document.getElementById('signup-sound');
+      document.querySelectorAll('.cadastro-link').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (sound) {
+            sound.currentTime = 0;
+            sound.play();
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>

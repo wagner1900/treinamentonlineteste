@@ -16,7 +16,7 @@
     <nav class="mt-2">
       <a href="index.html" class="me-3">Início</a>
       <a href="login.html" class="btn btn-warning me-3">Entrar</a>
-      <a href="register.html">Cadastrar</a>
+      <a href="register.html" class="cadastro-link">Cadastrar</a>
     </nav>
   </header>
   <section class="hero container">
@@ -37,5 +37,19 @@
   <footer class="text-center py-3 border-top border-warning">
     <p class="mb-0">&copy; 2024 Artes Marciais Online</p>
   </footer>
+  <audio id="signup-sound" src="old-zildjian-gong-quite-natural-34294.mp3" preload="auto"></audio>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sound = document.getElementById('signup-sound');
+      document.querySelectorAll('.cadastro-link').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (sound) {
+            sound.currentTime = 0;
+            sound.play();
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
