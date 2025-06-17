@@ -112,5 +112,20 @@ document.addEventListener('DOMContentLoaded', function() {
   updateModules();
 });
 </script>
+  <audio id="signup-sound" src="treinamentoonline/Sounds/old-zildjian-gong-quite-natural-34294.mp3" preload="auto"></audio>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sound = document.getElementById('signup-sound');
+      const form = document.querySelector('form');
+      if (form) {
+        form.addEventListener('submit', function () {
+          if (sound) {
+            sound.currentTime = 0;
+            sound.play();
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
