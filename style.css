@@ -186,6 +186,11 @@ header nav a.login-btn:hover {
   border-radius: 8px;
 }
 
+.jetkune-img {
+  height: 100px;
+  object-position: top;
+}
+
 .produto a.btn {
   display: block;
   width: 100%;
