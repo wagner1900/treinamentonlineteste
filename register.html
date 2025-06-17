@@ -29,14 +29,14 @@
       <input type="email" id="email" name="email" class="form-control mb-2" required />
 
       <label for="arte" class="form-label">Arte Marcial</label>
-      <select id="arte" name="arte" class="form-select mb-2" onchange="updatePricePlaceholder()">
+      <select id="arte" name="arte" class="form-select mb-2" onchange="updatePrice()">
         <option value="Jeet Kune Do">Jeet Kune Do</option>
         <option value="Luta Livre">Luta Livre</option>
         <option value="Blend Kickboxing">Blend Kickboxing</option>
       </select>
 
       <label for="valor" class="form-label">Mensalidade</label>
-      <input type="text" id="valor" name="valor" class="form-control mb-3" placeholder="R$170" />
+      <input type="text" id="valor" name="valor" class="form-control mb-3" readonly />
 
       <button type="submit" class="btn btn-warning w-100">Registrar</button>
     </form>
@@ -46,15 +46,19 @@
   </footer>
 
 <script>
-function updatePricePlaceholder() {
-  var arte = document.getElementById('arte').value;
-  var valor = document.getElementById('valor');
-  if (arte === 'Blend Kickboxing') {
-    valor.placeholder = 'R$190';
-  } else {
-    valor.placeholder = 'R$170';
-  }
+const prices = {
+  'Jeet Kune Do': 'R$170',
+  'Luta Livre': 'R$170',
+  'Blend Kickboxing': 'R$190'
+};
+
+function updatePrice() {
+  const arte = document.getElementById('arte').value;
+  const valor = document.getElementById('valor');
+  valor.value = prices[arte] || '';
 }
+
+document.addEventListener('DOMContentLoaded', updatePrice);
 </script>
 </body>
 </html>
