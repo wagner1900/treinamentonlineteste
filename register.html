@@ -34,9 +34,10 @@
         <option value="Jeet Kune Do - Básico">Jeet Kune Do - Básico</option>
         <option value="Jeet Kune Do - Intermediário">Jeet Kune Do - Intermediário</option>
         <option value="Jeet Kune Do - Avançado">Jeet Kune Do - Avançado</option>
-        <option value="Luta Livre - Básico">Luta Livre - Básico</option>
-        <option value="Luta Livre - Intermediário">Luta Livre - Intermediário</option>
-        <option value="Luta Livre - Avançado">Luta Livre - Avançado</option>
+          <option value="Luta Livre - Básico">Luta Livre - Básico</option>
+          <option value="Luta Livre - Básico Nível 2">Luta Livre - Básico Nível 2</option>
+          <option value="Luta Livre - Intermediário">Luta Livre - Intermediário</option>
+          <option value="Luta Livre - Avançado">Luta Livre - Avançado</option>
       </select>
 
       <label for="valor" class="form-label">Mensalidade</label>
@@ -52,23 +53,25 @@
   </footer>
 
 <script>
-const prices = {
-  'Jeet Kune Do - Básico': 'R$170',
-  'Jeet Kune Do - Intermediário': 'R$190',
-  'Jeet Kune Do - Avançado': 'R$210',
-  'Luta Livre - Básico': 'R$170',
-  'Luta Livre - Intermediário': 'R$190',
-  'Luta Livre - Avançado': 'R$210'
-};
+  const prices = {
+    'Jeet Kune Do - Básico': 'R$170',
+    'Jeet Kune Do - Intermediário': 'R$190',
+    'Jeet Kune Do - Avançado': 'R$210',
+    'Luta Livre - Básico': 'R$170',
+    'Luta Livre - Básico Nível 2': 'R$180',
+    'Luta Livre - Intermediário': 'R$190',
+    'Luta Livre - Avançado': 'R$210'
+  };
 
-const modules = {
-  'Jeet Kune Do - Básico': ['Fundamentos', 'Defesa Pessoal', 'Condicionamento'],
-  'Jeet Kune Do - Intermediário': ['Aplicações', 'Combinações', 'Estratégias'],
-  'Jeet Kune Do - Avançado': ['Sparring', 'Filosofia', 'Táticas Avançadas'],
-  'Luta Livre - Básico': ['Quedas', 'Controle de Solo', 'Finalizações Básicas'],
-  'Luta Livre - Intermediário': ['Passagens de Guarda', 'Raspagens', 'Finalizações Intermediárias'],
-  'Luta Livre - Avançado': ['Guarda Avançada', 'Estrangulamentos', 'Competição']
-};
+  const modules = {
+    'Jeet Kune Do - Básico': ['Fundamentos', 'Defesa Pessoal', 'Condicionamento'],
+    'Jeet Kune Do - Intermediário': ['Aplicações', 'Combinações', 'Estratégias'],
+    'Jeet Kune Do - Avançado': ['Sparring', 'Filosofia', 'Táticas Avançadas'],
+    'Luta Livre - Básico': ['Quedas', 'Controle de Solo', 'Finalizações Básicas'],
+    'Luta Livre - Básico Nível 2': ['Quedas', 'Controle de Solo', 'Finalizações Básicas'],
+    'Luta Livre - Intermediário': ['Passagens de Guarda', 'Raspagens', 'Finalizações Intermediárias'],
+    'Luta Livre - Avançado': ['Guarda Avançada', 'Estrangulamentos', 'Competição']
+  };
 
 function updatePrice() {
   const arte = document.getElementById('arte').value;
