@@ -214,3 +214,7 @@ header nav a.login-btn:hover {
   border-radius: 8px;
   border: 2px solid #ffc107;
 }
+
+.transparent-bg {
+  background-color: transparent;
+}
