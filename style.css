@@ -66,6 +66,13 @@ header h1 {
   filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
 }
 
+.certificate-img {
+  width: 220px;
+  height: auto;
+  display: block;
+  margin: 0.5rem auto 0;
+}
+
 footer {
   text-align: center;
   padding: 10px;
@@ -217,4 +224,5 @@ header nav a.login-btn:hover {
 
 .transparent-bg {
   background-color: transparent;
+  mix-blend-mode: multiply;
 }
