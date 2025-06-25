@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeet Kune Do - Básico Nível 2 Fase 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="text-center py-3 border-bottom border-warning">
+    <h1 class="display-5 text-warning m-0 d-flex align-items-center justify-content-center">Treinamento de Artes Marciais Online</h1>
+    <nav class="mt-2">
+      <a href="index.html" class="me-3">Início</a>
+      <a href="sobre.html" class="me-3">Sobre</a>
+      <a href="register.html" class="cadastro-link">Cadastrar</a>
+    </nav>
+  </header>
+  <main class="container py-4">
+    <h2 class="text-warning fw-bold mb-4">Nível Básico - Nível II - Fase 1</h2>
+    <ol>
+      <li class="mb-3">Trabalho de esquivas e saídas
+        <ol type="A" class="mt-2">
+          <li>Slep/esquerda direita</li>
+          <li>Bob Weave/esquerda/direita</li>
+          <li>Lin Back</li>
+          <li>Shoulder Roll</li>
+          <li>Knee Block 1</li>
+          <li>Knee Block 2</li>
+          <li>Knee Block 3</li>
+          <li>Knee Block 4</li>
+          <li>Saída lateral 1 e 2</li>
+          <li>Bai Jong 4 lados</li>
+        </ol>
+      </li>
+      <li class="mb-3">Trapping/Grappling Jun Fan
+        <ol type="A" class="mt-2">
+          <li>Contra Pak Dar /Pak Ping Choy/Quin Na grappling (Arm Hold em pé)</li>
+          <li>Contra Pak Dar/Pak Ping Choy/Quin Na grappling, Arm Hold levando para o chão</li>
+          <li>Contra Pak Dar/Double Leg</li>
+          <li>Loy Pak Dar/Noy Pak Dar/Guilhotina</li>
+          <li>Loy Pak Dar/Noy Pak Dar/Face Lock</li>
+          <li>Pak Dar/Finger Lock</li>
+          <li>Contra Lop Sao Dar</li>
+          <li>Pak Dar/Lop Sao Dar/Quin Na Arm Bar no cotovelo</li>
+        </ol>
+      </li>
+      <li class="mb-3">Jun Fan Gung Fu/Kickboxing
+        <ol type="A" class="mt-2">
+          <li>Catch Tan Dar/Cross/Hook/Cross/O'Ou Tek</li>
+          <li>Catch Shoulder Stop/Cross/Hook/Cross</li>
+          <li>Catch/Stop Bíceps/Cross/Hook/Cross/Juk Tek</li>
+          <li>Catch Biu Dar 1</li>
+          <li>Catch Biu Dar 2</li>
+        </ol>
+      </li>
+      <li class="mb-3">WOODEN DUMMY Set #1
+        <ol type="A" class="mt-2">
+          <li>Jun Fan Gung Fu Boneco de madeira</li>
+          <li>Jun Fan Gung Fu Ser #2</li>
+        </ol>
+      </li>
+    </ol>
+  </main>
+  <img src="treinamentoonline/Images/Assinatura_1.png" alt="Assinatura" class="img-fluid my-3" />
+  <footer class="text-center py-3 border-top border-warning">
+    <p class="mb-0">&copy; 2025 Artes Marciais Online</p>
+  </footer>
+  <audio id="signup-sound" src="treinamentoonline/Sounds/old-zildjian-gong-quite-natural-34294.mp3" preload="auto"></audio>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sound = document.getElementById('signup-sound');
+      document.querySelectorAll('.cadastro-link').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          if (sound) {
+            e.preventDefault();
+            sound.currentTime = 0;
+            sound.play();
+            const href = this.getAttribute('href');
+            setTimeout(function () {
+              window.location.href = href;
+            }, 300);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
