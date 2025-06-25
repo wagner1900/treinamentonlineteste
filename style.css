@@ -21,12 +21,21 @@ body::before {
 }
 
 header {
-  background: #ffffff url('treinamentoonline/Images/Edmarcio_Rodrigues_page1_no_bg.png')
-    center/contain no-repeat;
+  background: rgba(255, 255, 255, 0.85);
   padding: 20px;
   text-align: center;
   border-bottom: 4px solid #ffc107;
   position: relative;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('treinamentoonline/Images/Edmarcio_Rodrigues_page1.png')
+    center/contain no-repeat;
+  opacity: 0.6;
+  z-index: -1;
 }
 
 header h1 {
