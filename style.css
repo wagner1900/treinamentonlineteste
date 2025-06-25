@@ -21,10 +21,12 @@ body::before {
 }
 
 header {
-  background-color: #ffffff;
+  background: #ffffff url('treinamentoonline/Images/Edmarcio_Rodrigues_page1_no_bg.png')
+    center/contain no-repeat;
   padding: 20px;
   text-align: center;
   border-bottom: 4px solid #ffc107;
+  position: relative;
 }
 
 header h1 {
