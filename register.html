@@ -30,7 +30,7 @@
       <input type="email" id="email" name="email" class="form-control mb-2" required />
 
       <label for="arte" class="form-label">Produto</label>
-      <select id="arte" name="arte" class="form-select mb-2" onchange="updatePrice();updateModules();">
+      <select id="arte" name="arte" class="form-select mb-2" onchange="updatePrice();updateModules();updateInfo();">
         <option value="Jeet Kune Do - Básico">Jeet Kune Do - Básico</option>
         <option value="Jeet Kune Do - Intermediário">Jeet Kune Do - Intermediário</option>
         <option value="Jeet Kune Do - Avançado">Jeet Kune Do - Avançado</option>
@@ -43,6 +43,7 @@
 
       <label for="valor" class="form-label">Mensalidade</label>
       <input type="text" id="valor" name="valor" class="form-control mb-3" readonly />
+      <div id="course-info" class="mb-3"></div>
       <div id="modules" class="mb-3"></div>
 
       <button type="submit" class="btn btn-warning w-100">Registrar</button>
@@ -55,7 +56,7 @@
 
 <script>
   const prices = {
-    'Jeet Kune Do - Básico': 'R$170',
+    'Jeet Kune Do - Básico': 'R$510',
     'Jeet Kune Do - Intermediário': 'R$190',
     'Jeet Kune Do - Avançado': 'R$210',
     'Luta Livre - Básico': 'R$170',
@@ -87,6 +88,11 @@
     'Luta Livre - Avançado': ['Guarda Avançada', 'Estrangulamentos', 'Competição']
   };
 
+  const infos = {
+    'Jeet Kune Do - Básico':
+      'Este é o conteúdo básico Nível I Valor : R$ 510,00 <br>Atenção! Taxa de avaliação e certificado Incluso!<br><br>Após conclusão do módulo básico, caso você deseje, solicite sua avaliação online!'
+  };
+
 function updatePrice() {
   const arte = document.getElementById('arte').value;
   const valor = document.getElementById('valor');
@@ -113,6 +119,12 @@ function updateModules() {
   }
 }
 
+function updateInfo() {
+  const arte = document.getElementById('arte').value;
+  const container = document.getElementById('course-info');
+  container.innerHTML = infos[arte] || '';
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   const params = new URLSearchParams(window.location.search);
   const curso = params.get('curso');
@@ -121,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   updatePrice();
   updateModules();
+  updateInfo();
 });
 </script>
   <audio id="signup-sound" src="treinamentoonline/Sounds/old-zildjian-gong-quite-natural-34294.mp3" preload="auto"></audio>
