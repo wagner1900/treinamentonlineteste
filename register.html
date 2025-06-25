@@ -66,7 +66,18 @@
   };
 
   const modules = {
-    'Jeet Kune Do - Básico': ['Fundamentos', 'Defesa Pessoal', 'Condicionamento'],
+    'Jeet Kune Do - Básico': [
+      '1- Bai Jong (postura e estrutura)',
+      '2- Foot Work (trabalho de pés)',
+      '3- Lil Si Dei Dar (ataques e defesas simultâneas)',
+      "4- Trabalho de Chutes básico (Jun Fan Gung Fu): O'Ou Tek, Jik Tek, So Tek, Juk Tek, Juen So Tek, Juen Juk Tek",
+      "5- Trabalho de Socos: Jab - Ping Choy, Cross - Ping Choy, Hook - O'Ou Choy, Uppecurt - Jin Choy, Pao Choy (Leopardo Fist), Qua Choy, Chun Choy (socos correntes), Lead Punch (Soco vertical)",
+      '6- Trapping Básico: Man Sao, Pak Sao Dar, Lop Sao Dar, Loy Pak Dar, Noy Pak Dar',
+      '7- Pak Dar Focus Mitti',
+      '8- Grappling (Qui Na Básico): Arm Bar 1, Arm Bar 2',
+      '9- Jun Fan Gung Fu/Kickboxing Combinations/Focus Mittis: Jab - Cross, Cross - Hook - Cross, Cross - Upper - Cross, Cross - Body Hook - Cross, Qua Choy - Cross - Hook Cross, Kris - Cross, Lead Punch, Chun Choy',
+      "10 - Jun Fan Gung Fu/Kickboxing Combinations, socos e chutes: Jab - Cross - O'Ou Tek (perna da frente), Jab - Cross - O'Ou Tek perna de trás, Cross - Hook - Cross - Jik Tek - O'Ou Tek perna da frente, So Tek perna da frente - Cross - Hook - Cross, O'Ou Tek perna da frente - Cross - Hook Cross"
+    ],
     'Jeet Kune Do - Intermediário': ['Aplicações', 'Combinações', 'Estratégias'],
     'Jeet Kune Do - Avançado': ['Sparring', 'Filosofia', 'Táticas Avançadas'],
     'Luta Livre - Básico': ['Quedas', 'Controle de Solo', 'Finalizações Básicas'],
@@ -90,6 +101,7 @@ function updateModules() {
   if (list.length) {
     const h3 = document.createElement('h3');
     h3.textContent = 'Módulos do Curso';
+    h3.classList.add('fw-bold', 'text-warning');
     container.appendChild(h3);
     const ul = document.createElement('ul');
     list.forEach(m => {
