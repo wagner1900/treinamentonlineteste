@@ -35,6 +35,7 @@
       <label for="arte" class="form-label">Produto</label>
       <select id="arte" name="arte" class="form-select mb-2" onchange="updatePrice();updateModules();updateInfo();">
         <option value="Jeet Kune Do - Básico">Jeet Kune Do - Básico</option>
+        <option value="Jeet Kune Do - Básico Nível 2 Fase 1">Jeet Kune Do - Básico Nível 2 Fase 1</option>
         <option value="Jeet Kune Do - Básico Nível 2 Fase 2">Jeet Kune Do - Básico Nível 2 Fase 2</option>
         <option value="Jeet Kune Do - Intermediário">Jeet Kune Do - Intermediário</option>
         <option value="Jeet Kune Do - Intermediário Nível 2">Jeet Kune Do - Intermediário Nível 2</option>
@@ -63,7 +64,7 @@
   const prices = {
     'Jeet Kune Do - Básico': 'R$520',
     'Jeet Kune Do - Básico Nível 2 Fase 2': 'R$600',
-    'Jeet Kune Do - Básico Nível 2 Fase 1': 'R$580',
+      'Jeet Kune Do - Básico Nível 2 Fase 1': 'R$520',
     'Jeet Kune Do - Intermediário': 'R$190',
     'Jeet Kune Do - Intermediário Nível 2': 'R$600',
     'Jeet Kune Do - Avançado': 'R$210',
@@ -120,37 +121,28 @@
       'Jun Fan Gung Fu Ser # 2'
     ],
       'Jeet Kune Do - Básico Nível 2 Fase 1': [
-      'Nível II - Fase 1',
-      '1 - Trabalho de esquivas e saídas',
-      'A - Slep/esquerda direita',
-      'B - Bob Weave/esquerda/direita',
-      'C - Lin Back',
-      'D - Shoulder Roll',
-      'E - Knee Block 1',
-      'F - Knee Block 2',
-      'G - Knee Block 3',
-      'H - Knee Block 4',
-      'I - Saída lateral 1 e 2',
-      'J - Bai Jong 4 lados',
-      '2 - Trapping/Grappling Jun Fan',
-      'A - Contra Pak Dar /Pak Ping Choy/Quin Na grappling (Arm Hold em pé).',
-      'B - Contra Pak Dar/Pak Ping Choy/Quin Na grappling, Arm Hold levando para o chão.',
-      'C - Contra Pak Dar/Double Leg',
-      'D - Loy Pak Dar/Noy Pak Dar/ Guilhotina',
-      'E - Loy Pak Dar/Noy Pak Dar/Face Lock',
-      'F - Pak Dar /Finger Lock',
-      'G - Contra Lop Sao Dar',
-      'H - Pak Dar/Lop Sao Dar/Quin Na Arm Bar no cotovelo',
-      '3 - Jun Fan Gung Fu/ Kickboxing',
-      "A - Catch Tan Dar/Cross/Hook/Cross/ O'Ou Tek",
-      'B - Catch Shoulder Stop/ Cross/Hook/Cross',
-      'C - Catch/Stop Bíceps/Cross /Hook/Cross/Juk Tek',
-      'D - Catch Biu Dar 1',
-      'E - Catch Biu Dar 2',
-      '4 - WOODEN DUMMY Set # 1',
-      'A - Jun Fan Gung Fu Boneco de madeira .',
-      'Jun Fan Gung Fu Ser # 2'
-    ],
+        '<span class="fw-bold text-warning">Jun Fan Trapping</span>',
+        '1 -  Trapping Combinação',
+        'A - Loy Pak Dar/Noy Pak Dar',
+        'B - Loy Pak Dar/Lop Sao Dar',
+        'C - Loy Pak Dar/ Noy Pak Sao Dar/Lop Sat Sao Dar',
+        'D - Loy Pak Sao Dar/Lop Sao Dar/Kao Dar',
+        '<span class="fw-bold text-warning">2 - Trapping/Grappling</span>',
+        'A - Pak Sao Dar/Wrist Lock',
+        'B - Pak Sao Dar/Sut Sao/Wrist Lock (chave de pulso)',
+        'C - Pak Sao Dar/Pak Sut Sao/Ghan Sao Dar',
+        '<span class="fw-bold text-warning">3 - Chutes e interceptações</span>',
+        'A - Stop Jeet Tek',
+        'B - Pak Tek',
+        'C - Qua Tek Interno e externo',
+        '<span class="fw-bold text-warning">4 - Combinações Jun Fan Gung Fu/Kickboxing/Focus Mitti</span>',
+        'A - Jik Tek /Lead Punch',
+        'B - Jik Tek Fake /Lead Punch',
+        'C - Lead Punch fake /Jik Tek',
+        "D - O' Ou sao Juk Tek/Cross/Hook/Cross",
+        'F - Cross/Hook/Cross/ Bob Weave/Cross/Hook/Cross',
+        'F - Catch/Parryng/Bob Weave/Cross/Hook/Cross'
+      ],
     'Jeet Kune Do - Intermediário': ['Aplicações', 'Combinações', 'Estratégias'],
     'Jeet Kune Do - Intermediário Nível 2': ['Aplicações Avançadas', 'Combinações', 'Estratégias'],
     'Jeet Kune Do - Avançado': ['Sparring', 'Filosofia', 'Táticas Avançadas'],
@@ -189,7 +181,7 @@ function updateModules() {
     const ul = document.createElement('ul');
     list.forEach(m => {
       const li = document.createElement('li');
-      li.textContent = m;
+      li.innerHTML = m;
       ul.appendChild(li);
     });
     container.appendChild(ul);
