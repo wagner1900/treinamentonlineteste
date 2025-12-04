@@ -33,9 +33,22 @@ body::before {
 header {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 248, 225, 0.9));
   padding: 20px;
-  text-align: center;
   border-bottom: 4px solid var(--accent-red);
   position: relative;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.header-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 header::before {
@@ -53,6 +66,14 @@ header h1 {
   font-size: 2rem;
   color: var(--accent-red);
   gap: 0.5rem;
+}
+
+.header-side-logo {
+  max-height: 90px;
+  width: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(193, 18, 31, 0.15);
+  object-fit: cover;
 }
 
 .brand-logo {
