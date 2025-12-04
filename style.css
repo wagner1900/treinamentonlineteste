@@ -52,6 +52,13 @@ header h1 {
   margin: 0;
   font-size: 2rem;
   color: var(--accent-red);
+  gap: 0.5rem;
+}
+
+.brand-logo {
+  height: 1em;
+  width: auto;
+  object-fit: contain;
 }
 
 .hero {
