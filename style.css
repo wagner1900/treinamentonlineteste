@@ -1,10 +1,20 @@
+:root {
+  --primary-yellow: #ffc107;
+  --primary-yellow-dark: #d39e00;
+  --accent-red: #c1121f;
+  --accent-red-dark: #8f0e1a;
+  --soft-amber: #fff8e1;
+  --text: #1a1a1a;
+  --surface: rgba(255, 255, 255, 0.92);
+}
+
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
   font-family: "Noto Serif JP", "Poppins", Arial, Helvetica, sans-serif;
-  background: #ffffff;
-  color: #333;
+  background: linear-gradient(180deg, #ffffff 0%, #fff8e1 100%);
+  color: var(--text);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -21,10 +31,10 @@ body::before {
 }
 
 header {
-  background: rgba(255, 255, 255, 0.85);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 248, 225, 0.9));
   padding: 20px;
   text-align: center;
-  border-bottom: 4px solid #ffc107;
+  border-bottom: 4px solid var(--accent-red);
   position: relative;
 }
 
@@ -41,7 +51,7 @@ header::before {
 header h1 {
   margin: 0;
   font-size: 2rem;
-  color: #ffc107;
+  color: var(--accent-red);
 }
 
 .hero {
@@ -55,18 +65,19 @@ header h1 {
 }
 
 .hero-box {
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 2px solid #ffc107;
-  border-radius: 8px;
+  background-color: var(--surface);
+  border: 2px solid var(--primary-yellow);
+  border-radius: 12px;
   padding: 20px;
   display: inline-block;
+  box-shadow: 0 12px 30px rgba(193, 18, 31, 0.12), 0 4px 12px rgba(255, 193, 7, 0.25);
 }
 
 .hero h2 {
   font-size: 1.8rem;
   max-width: 600px;
   line-height: 1.4;
-  color: #333;
+  color: var(--accent-red);
   margin-top: 1rem;
 }
 
@@ -74,7 +85,7 @@ header h1 {
   width: 220px;
   height: auto;
   margin-bottom: 20px;
-  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+  filter: drop-shadow(0 0 8px rgba(193, 18, 31, 0.4));
 }
 
 .certificate-img {
@@ -88,9 +99,10 @@ footer {
   text-align: center;
   padding: 10px;
   background-color: #ffffff;
-  border-top: 4px solid #ffc107;
-  color: #333;
+  border-top: 4px solid var(--accent-red);
+  color: var(--text);
   font-size: 0.9rem;
+  box-shadow: 0 -6px 12px rgba(193, 18, 31, 0.08);
 }
 
 header nav {
@@ -98,20 +110,24 @@ header nav {
 }
 
 header nav a {
-  color: #333;
+  color: var(--accent-red);
   margin: 0 10px;
   text-decoration: none;
+  font-weight: 600;
 }
 
 header nav a.login-btn {
-  background-color: #ffc107;
-  color: #1a1a1a;
+  background-color: var(--primary-yellow);
+  color: var(--text);
   padding: 6px 12px;
-  border-radius: 4px;
+  border-radius: 6px;
+  border: 1px solid var(--accent-red);
+  box-shadow: 0 6px 12px rgba(193, 18, 31, 0.15);
 }
 
 header nav a.login-btn:hover {
-  background-color: #d39e00;
+  background-color: var(--primary-yellow-dark);
+  color: var(--accent-red-dark);
 }
 
 .videos {
@@ -139,13 +155,15 @@ header nav a.login-btn:hover {
 }
 
 .login-form {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: var(--surface);
   padding: 30px;
-  border-radius: 8px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 320px;
+  border: 2px solid var(--primary-yellow);
+  box-shadow: 0 12px 24px rgba(193, 18, 31, 0.12);
 }
 
 .login-form h2 {
@@ -166,16 +184,19 @@ header nav a.login-btn:hover {
 }
 
 .login-form button {
-  background-color: #ffc107;
-  border: none;
-  color: #1a1a1a;
+  background-color: var(--primary-yellow);
+  border: 1px solid var(--accent-red);
+  color: var(--text);
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(193, 18, 31, 0.18);
 }
 
 .login-form button:hover {
-  background-color: #d39e00;
+  background-color: var(--primary-yellow-dark);
+  color: var(--accent-red-dark);
 }
 
 .produtos {
@@ -184,11 +205,12 @@ header nav a.login-btn:hover {
 }
 
 .produto {
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 2px solid #ffc107;
-  border-radius: 8px;
+  background-color: var(--surface);
+  border: 2px solid var(--primary-yellow);
+  border-radius: 12px;
   padding: 20px;
   margin-bottom: 20px;
+  box-shadow: 0 10px 24px rgba(193, 18, 31, 0.12);
 }
 
 .produto h3 {
@@ -229,8 +251,9 @@ header nav a.login-btn:hover {
 .gallery img {
   width: 100%;
   max-width: 220px;
-  border-radius: 8px;
-  border: 2px solid #ffc107;
+  border-radius: 10px;
+  border: 2px solid var(--accent-red);
+  box-shadow: 0 10px 18px rgba(193, 18, 31, 0.12);
 }
 
 .transparent-bg {
