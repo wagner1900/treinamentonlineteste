@@ -1,5 +1,5 @@
 import Image from "next/image";
-import dragonSrc from "../Images/20250616_2132_Dragão Oriental Intimidador_simple_compose_01jxxmqkb1f39tvf3mzjkg1xb6.png";
+import dragonSrc from "../Images/WhatsApp Image 2025-12-04 at 15.34.25.jpeg";
 
 export function Hero() {
   return (
