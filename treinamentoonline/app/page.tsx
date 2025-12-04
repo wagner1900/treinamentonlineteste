@@ -1,7 +1,7 @@
 import { Hero } from "@/components/Hero";
 import { ProductGrid } from "@/components/ProductGrid";
 import Image from "next/image";
-import bannerSrc from "../Images/WhatsApp Image 2025-06-18 at 12.50.03.jpeg";
+import bannerSrc from "../Images/WhatsApp Image 2025-12-04 at 15.31.12.jpeg";
 
 export default function Page() {
   return (
